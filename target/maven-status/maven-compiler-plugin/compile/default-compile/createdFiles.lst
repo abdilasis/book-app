@@ -1,0 +1,6 @@
+com\qa\service\repository\BookDBRepository.class
+com\qa\domain\Book.class
+com\qa\integration\JAXActivator.class
+com\qa\util\JSONUtil.class
+com\qa\service\repository\BookRepository.class
+com\qa\integration\BookEndpoint.class

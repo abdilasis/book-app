@@ -1,0 +1,23 @@
+<div class="panel panel-default" ng-controller="bookController as bookCtrl">
+	    <div class="panel-heading">Books page</div>
+	    <div class="panel-body">
+   		{{bookCtrl.test}}
+   		<div ng-hide="accountCtrl.isHidden">
+        	<h3><span>Books table</span></h3>
+        	<table class="table">
+        		<tr>
+        			<th>{{'title' | uppercase}}</th>
+        			<th>{{'genre' | uppercase}}</th>
+        			<th>{{'publish year' | uppercase}}</th>
+        		</tr>
+        		<tr ng-repeat="book in bookCtrl.books">
+							<td>{{book.bookTitle}}</td>
+							<td>{{book.genre}}</td>
+							<td>{{book.publishYear}}</td>
+						 <td><input type="button" value="Delete" ng-click="bookCtrl.delete(book)"/></td>
+        		</tr>
+        	</table>
+        </div>
+        <button class="btn"ng-click="accountCtrl.hideTable()">Hide accounts</button>
+	</div>
+</div>
