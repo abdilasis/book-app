@@ -2,23 +2,26 @@
 <html lang="en" ng-app="bookApp">
 <head>
     <meta charset="UTF-8">
-    <title>Book Application</title>
+    <title>My Book Application</title>
 </head>
 <body>
-    <nav>
-	    <div>
-	        <div>
-	            <a href="#">BookApp</a>
+    <nav class="navbar navbar-default">
+	    <div class="container-fluid">
+	        <div class="navbar-header">
+	            <a class="navbar-brand" href="#">BookApp</a>
 	        </div>
-	        <ul>
+	        <ul class="nav navbar-nav">
 	            <li><a ui-sref="dashboard">Dashboard</a></li>
 	            <li><a ui-sref="book">Book</a></li>
 	        </ul>
 	    </div>
 	</nav>
 
-    <div ui-view></div>
 
+
+    <div ui-view></div>
+    <link rel="stylesheet" href="scripts/bootstrap.min.css">
+    <script src="scripts/jquery-2.1.4.min.js"></script>
     <script src="scripts/angular.min.js"></script>
     <script src="scripts/ui-router.min.js"></script>
 

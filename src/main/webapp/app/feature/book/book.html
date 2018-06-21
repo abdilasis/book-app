@@ -1,8 +1,8 @@
 <div class="panel panel-default" ng-controller="bookController as bookCtrl">
 	    <div class="panel-heading">Books page</div>
 	    <div class="panel-body">
-   		{{bookCtrl.test}}
-   		<div ng-hide="accountCtrl.isHidden">
+
+   		<div ng-hide="bookCtrl.isHidden">
         	<h3><span>Books table</span></h3>
         	<table class="table">
         		<tr>
@@ -18,6 +18,19 @@
         		</tr>
         	</table>
         </div>
-        <button class="btn"ng-click="accountCtrl.hideTable()">Hide accounts</button>
+        <button class="btn"ng-click="bookCtrl.hideTable()">Hide Books</button>
+
+
+				<div >
+					<form name ="formData">
+						<input type = "text" placeholder="Title" name ="bookTitle" ng-model ="bookCtrl.formData.bookTitle">
+						<input type = "text" placeholder="Genre" name ="genre" ng-model ="bookCtrl.formData.genre">
+						<input type = "text" placeholder="publish year" name "year" ng-model ="bookCtrl.formData.year">
+						<button class="btn n" ng-click ="bookCtrl.add()" >Save</button>
+
+					</form>
+
+
+				</div>
 	</div>
 </div>

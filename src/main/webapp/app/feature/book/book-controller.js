@@ -6,12 +6,27 @@
 
     	var vm = this;
 
-      
+      vm.isHidden = false;
+
+    vm.hideTable = function()
+    {
+      vm.isHidden = !vm.isHidden
+    };
 
         vm.delete = function(bookToDelete) {
             bookService.deleteBook(bookToDelete);
             bookService.getBooks().then(function (results) {
             vm.books = results;});
+        };
+
+        vm.add = function(){
+          var result = {"bookTitle":vm.formData.bookTitle,
+                         "genre":vm.formData.genre,
+                         "publishYear":vm.formData.year  };
+             bookService.saveBook(result);
+             bookService.getBooks().then(function (results) {
+             vm.books = results;});
+
         }
 
         function init() {
